@@ -1,0 +1,28 @@
+.word {
+  display: inline;
+  border-radius: 2px;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.current {
+  background: rgba(79, 156, 255, 0.06);
+  border-bottom: 2px solid rgba(79, 156, 255, 0.3);
+}
+
+.omitted {
+  text-decoration: line-through;
+  text-decoration-color: var(--type-error);
+  opacity: 0.5;
+}
+
+.endCaret {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  vertical-align: text-bottom;
+  background: var(--type-cursor);
+  border-radius: 1px;
+  margin-left: 1px;
+  animation: blink 1s step-start infinite;
+  box-shadow: 0 0 6px var(--type-cursor);
+}

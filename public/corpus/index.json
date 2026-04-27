@@ -1,0 +1,7 @@
+[
+  { "id": "easy-1", "difficulty": "easy", "wordCount": 42 },
+  { "id": "easy-2", "difficulty": "easy", "wordCount": 45 },
+  { "id": "medium-1", "difficulty": "medium", "wordCount": 50 },
+  { "id": "hard-1", "difficulty": "hard", "wordCount": 50 },
+  { "id": "num-1", "difficulty": "numerical", "wordCount": 40 }
+]

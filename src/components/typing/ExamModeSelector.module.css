@@ -1,0 +1,105 @@
+.selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  animation: fadeIn 0.4s var(--ease-out) both;
+}
+
+.group { display: flex; flex-direction: column; gap: var(--space-3); }
+
+.groupLabel {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* Mode buttons */
+.modeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+.modeBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-out),
+              background   var(--duration-fast) var(--ease-out);
+}
+
+.modeBtn:hover { background: var(--bg-elevated); }
+
+.active-ssc  { border-color: var(--ssc-color);  background: rgba(255,209,102,0.06); }
+.active-rrb  { border-color: var(--rrb-color);  background: rgba(6,214,160,0.06);   }
+.active-bank { border-color: var(--bank-color); background: rgba(123,97,255,0.06);  }
+.active-std  { border-color: var(--accent-primary); background: rgba(79,156,255,0.06); }
+
+.modeName {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.modeDesc {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Duration buttons */
+.durationGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.durBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-out),
+              background   var(--duration-fast) var(--ease-out);
+}
+
+.durBtn:hover { background: var(--bg-elevated); }
+
+.durActive {
+  border-color: var(--accent-primary);
+  background: rgba(79,156,255,0.08);
+}
+
+.durLabel {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.durDesc {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.startBtn {
+  align-self: flex-start;
+  font-size: var(--text-base);
+  padding: var(--space-4) var(--space-8);
+}
+
+@media (max-width: 640px) {
+  .modeGrid { grid-template-columns: repeat(2, 1fr); }
+}

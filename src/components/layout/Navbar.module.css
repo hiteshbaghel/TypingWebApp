@@ -1,0 +1,107 @@
+.header {
+  position: sticky;
+  top: 16px;
+  z-index: var(--z-sticky);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  background: rgba(19, 19, 26, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+  font-family: var(--font-ui);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.logo:hover {
+  opacity: 0.85;
+}
+
+.logoAccent {
+  color: var(--accent-primary);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  list-style: none;
+  flex: 1;
+}
+
+.link {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.link:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.linkActive {
+  color: #fff;
+  background: linear-gradient(135deg, rgba(79, 156, 255, 0.2), rgba(79, 156, 255, 0.05));
+  border: 1px solid rgba(79, 156, 255, 0.2);
+  box-shadow: 0 0 12px rgba(79, 156, 255, 0.1);
+}
+
+.modes {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .header {
+    top: 0;
+    padding: 0;
+    margin-bottom: var(--space-4);
+  }
+  .nav {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-4);
+  }
+  .modes {
+    display: none;
+  }
+  .links {
+    gap: 0;
+  }
+  .link {
+    padding: var(--space-2);
+  }
+}

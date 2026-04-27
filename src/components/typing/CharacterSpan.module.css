@@ -1,0 +1,32 @@
+.char {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  transition: color var(--duration-fast) var(--ease-out);
+  white-space: pre;
+}
+
+.pending { color: var(--type-pending); }
+.correct { color: var(--type-correct); }
+.error   {
+  color: var(--type-error);
+  text-decoration: underline;
+  text-decoration-color: var(--type-error);
+  text-underline-offset: 3px;
+}
+
+/* Blinking caret — appears before this character */
+.caret::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 15%;
+  height: 70%;
+  width: 2px;
+  background: var(--type-cursor);
+  border-radius: 1px;
+  animation: blink 1s step-start infinite;
+  box-shadow: 0 0 6px var(--type-cursor);
+}
