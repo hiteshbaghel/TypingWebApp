@@ -1,4 +1,4 @@
-.adSpace {
+.adSpace, .adContainer {
   width: 100%;
   background: var(--bg-surface);
   border: 1px dashed var(--bg-border);
