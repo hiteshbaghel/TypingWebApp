@@ -15,7 +15,7 @@ export default function ResultsPage() {
       </p>
 
       <div style={{ marginTop: 'var(--space-8)' }}>
-        <AdPlaceholder format="horizontal" />
+        <AdPlaceholder format="horizontal" slot="6780215702" />
       </div>
     </div>
   );

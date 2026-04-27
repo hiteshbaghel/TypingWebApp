@@ -113,7 +113,7 @@ export default function TypingInterface() {
           </div>
 
           <div style={{ marginTop: 'var(--space-8)', marginBottom: 'var(--space-4)' }}>
-            <AdPlaceholder format="horizontal" />
+            <AdPlaceholder format="horizontal" slot="6780215702" />
           </div>
 
           <KeyboardHeatmap wordResults={useTypingStore.getState().wordResults} />

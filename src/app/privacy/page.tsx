@@ -66,7 +66,7 @@ export default function PrivacyPage() {
       </div>
 
       <div style={{ marginTop: 'var(--space-12)' }}>
-        <AdPlaceholder format="horizontal" />
+        <AdPlaceholder format="horizontal" slot="6780215702" />
       </div>
     </div>
   );

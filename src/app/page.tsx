@@ -34,7 +34,7 @@ export default function HomePage() {
       </section>
 
       <div style={{ margin: 'var(--space-8) auto', maxWidth: '1000px', width: '100%' }}>
-        <AdPlaceholder format="horizontal" />
+        <AdPlaceholder format="horizontal" slot="6780215702" />
       </div>
 
       {/* Feature highlights */}

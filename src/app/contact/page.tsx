@@ -83,7 +83,7 @@ export default function ContactPage() {
       </div>
 
       <div style={{ marginTop: 'var(--space-12)' }}>
-        <AdPlaceholder format="rectangle" />
+        <AdPlaceholder format="rectangle" slot="6780215702" />
       </div>
     </div>
   );
