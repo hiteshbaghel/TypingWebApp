@@ -7,18 +7,18 @@ import AdPlaceholder from '@/components/ads/AdPlaceholder';
 
 export const metadata: Metadata = {
   title: {
-    default: 'TypingPro — SSC, RRB & Banking Exam Typing Practice',
-    template: '%s | TypingPro',
+    default: 'Typing-Sprint — SSC, RRB & Banking Exam Typing Practice',
+    template: '%s | Typing-Sprint',
   },
   description:
     'High-fidelity typing practice platform for SSC, RRB NTPC, and Banking exams. Accurate error marking, KDPH, WPM tracking and keyboard heatmaps.',
-  metadataBase: new URL('https://webapp.hiteshbaghel.in'),
+  metadataBase: new URL('https://typingsprint.hiteshbaghel.in'),
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://webapp.hiteshbaghel.in',
-    siteName: 'TypingPro',
-    title: 'TypingPro — SSC, RRB & Banking Exam Typing Practice',
+    url: 'https://typingsprint.hiteshbaghel.in',
+    siteName: 'Typing-Sprint',
+    title: 'Typing-Sprint — SSC, RRB & Banking Exam Typing Practice',
     description:
       'High-fidelity typing practice platform for SSC, RRB NTPC, and Banking exams.',
   },

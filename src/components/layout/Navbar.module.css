@@ -43,7 +43,7 @@
 .navContent {
   display: flex;
   align-items: center;
-  flex: 1;
+  margin-left: var(--space-4);
 }
 
 .links {
@@ -83,6 +83,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  margin-left: auto;
 }
 
 .mobileModes {

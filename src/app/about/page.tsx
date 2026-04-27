@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import AdPlaceholder from '@/components/ads/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'About Us | TypingPro',
-  description: 'Learn about TypingPro, the ultimate high-fidelity typing performance platform for Indian government and banking exams.',
+  title: 'About Us | Typing-Sprint',
+  description: 'Learn about Typing-Sprint, the ultimate high-fidelity typing performance platform for Indian government and banking exams.',
 };
 
 export default function AboutPage() {

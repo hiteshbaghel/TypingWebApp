@@ -9,7 +9,7 @@ export default function Footer() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
           <p className={styles.copy}>
             © {year}{' '}
-            <Link href="https://hiteshbaghel.in" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600 }}>
+            <Link href="https://www.hiteshbaghel.in" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600 }}>
               Hitesh Baghel
             </Link>
             . All rights reserved.

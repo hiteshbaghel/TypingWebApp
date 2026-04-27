@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           <span className="badge badge--rrb" style={{ fontSize: 'var(--text-xs)', padding: '4px 10px' }}>Updated: April 2026</span>
         </div>
         <p style={{ fontSize: 'var(--text-lg)', color: 'var(--text-secondary)' }}>
-          At TypingPro, your privacy is our priority. We believe in complete transparency regarding the information we collect and how it is used.
+          At Typing-Sprint, your privacy is our priority. We believe in complete transparency regarding the information we collect and how it is used.
         </p>
       </div>
       

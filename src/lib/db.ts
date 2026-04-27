@@ -14,7 +14,7 @@ export class TypingDatabase extends Dexie {
   sessions!: Table<TypingSessionRecord, number>;
 
   constructor() {
-    super('TypingProDB');
+    super('TypingSprintDB');
     this.version(1).stores({
       sessions: '++id, date, examMode, difficulty',
     });

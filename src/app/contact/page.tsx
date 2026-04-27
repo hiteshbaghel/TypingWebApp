@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import AdPlaceholder from '@/components/ads/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | TypingPro',
+  title: 'Contact Us | Typing-Sprint',
   description: 'Get in touch for support, feedback, or business inquiries.',
 };
 
 export default function ContactPage() {
   return (
-    <div className="container" style={{ paddingTop: 'var(--space-12)', paddingBottom: 'var(--space-16)', maxWidth: '800px' }}>
+    <div className="container" style={{ paddingTop: 'var(--space-12)', paddingBottom: 'var(--space-16)', maxWidth: '1100px' }}>
       
       <div style={{ textAlign: 'center', marginBottom: 'var(--space-12)' }}>
         <h1 style={{ 
@@ -22,11 +22,11 @@ export default function ContactPage() {
           Get in Touch
         </h1>
         <p style={{ fontSize: 'var(--text-lg)', color: 'var(--text-secondary)', maxWidth: '500px', margin: '0 auto', lineHeight: 1.6 }}>
-          Have questions about our scoring algorithms, found a bug, or want to suggest a new feature? We'd love to hear from you.
+          Have questions about <strong>Typing-Sprint</strong>? We are here to help. Found a bug, or want to suggest a new feature? We'd love to hear from you.
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-6)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 'var(--space-6)' }}>
         
         <div className="card hover-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: 'var(--space-8)' }}>
           <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(79,156,255,0.1), rgba(79,156,255,0.05))', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 'var(--text-3xl)', marginBottom: 'var(--space-6)', border: '1px solid rgba(79,156,255,0.2)' }}>
@@ -51,6 +51,32 @@ export default function ContactPage() {
           </p>
           <a href="mailto:hiteshbaghel03@gmail.com" className="btn btn--ghost" style={{ width: '100%', justifyContent: 'center' }}>
             hiteshbaghel03@gmail.com
+          </a>
+        </div>
+
+        <div className="card hover-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: 'var(--space-8)' }}>
+          <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(10,102,194,0.1), rgba(10,102,194,0.05))', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 'var(--text-3xl)', marginBottom: 'var(--space-6)', border: '1px solid rgba(10,102,194,0.2)' }}>
+            🔗
+          </div>
+          <h3 style={{ fontSize: 'var(--text-xl)', fontWeight: 700, marginBottom: 'var(--space-2)' }}>LinkedIn</h3>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 'var(--text-sm)', marginBottom: 'var(--space-8)', lineHeight: 1.6 }}>
+            Connect with me for professional networking and updates.
+          </p>
+          <a href="https://www.linkedin.com/in/hiteshbaghel" target="_blank" rel="noopener noreferrer" className="btn btn--primary" style={{ width: '100%', justifyContent: 'center', background: '#0a66c2', borderColor: '#0a66c2' }}>
+            View Profile
+          </a>
+        </div>
+
+        <div className="card hover-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: 'var(--space-8)' }}>
+          <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02))', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 'var(--text-3xl)', marginBottom: 'var(--space-6)', border: '1px solid rgba(255,255,255,0.1)' }}>
+            🌐
+          </div>
+          <h3 style={{ fontSize: 'var(--text-xl)', fontWeight: 700, marginBottom: 'var(--space-2)' }}>Portfolio</h3>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 'var(--text-sm)', marginBottom: 'var(--space-8)', lineHeight: 1.6 }}>
+            Explore my other projects and technical blog.
+          </p>
+          <a href="https://www.hiteshbaghel.in" target="_blank" rel="noopener noreferrer" className="btn btn--ghost" style={{ width: '100%', justifyContent: 'center' }}>
+            Visit Website
           </a>
         </div>
 

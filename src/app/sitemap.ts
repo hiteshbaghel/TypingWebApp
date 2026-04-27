@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://webapp.hiteshbaghel.in';
+  const baseUrl = 'https://typingsprint.hiteshbaghel.in';
 
   // Static routes
   const routes = ['', '/history', '/about', '/contact', '/privacy'].map((route) => ({

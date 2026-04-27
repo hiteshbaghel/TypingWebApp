@@ -35,10 +35,10 @@ export default function Navbar() {
     <header className={styles.header} role="banner">
       <nav className={styles.nav} aria-label="Main navigation">
         {/* Logo */}
-        <Link href="/" className={styles.logo} aria-label="TypingPro home" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <Link href="/" className={styles.logo} aria-label="Typing-Sprint home" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <span style={{ fontSize: '1.2em' }}>⌨️</span>
           <span style={{ background: 'linear-gradient(to right, #fff, var(--text-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            <span className={styles.logoAccent}>Typing</span>Pro
+            <span className={styles.logoAccent}>Typing</span>-Sprint
           </span>
         </Link>
 
@@ -58,31 +58,31 @@ export default function Navbar() {
           <span className="badge badge--rrb">RRB</span>
           <span className="badge badge--bank">Bank</span>
         </div>
-      </nav>
 
-      {/* Nav Content (Overlay on Mobile) */}
-      <div className={`${styles.navContent} ${isMenuOpen ? styles.navContentOpen : ''}`}>
-        <ul className={styles.links} role="list">
-          {navLinks.map(({ href, label }) => (
-            <li key={href} className={styles.navItem}>
-              <Link
-                href={href}
-                className={`${styles.link} ${pathname === href ? styles.linkActive : ''}`}
-                aria-current={pathname === href ? 'page' : undefined}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Nav Content (Overlay on Mobile, Inline on Desktop) */}
+        <div className={`${styles.navContent} ${isMenuOpen ? styles.navContentOpen : ''}`}>
+          <ul className={styles.links} role="list">
+            {navLinks.map(({ href, label }) => (
+              <li key={href} className={styles.navItem}>
+                <Link
+                  href={href}
+                  className={`${styles.link} ${pathname === href ? styles.linkActive : ''}`}
+                  aria-current={pathname === href ? 'page' : undefined}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-        {/* Exam mode chips - visible in mobile menu */}
-        <div className={styles.mobileModes} aria-label="Exam modes">
-          <span className="badge badge--ssc">SSC</span>
-          <span className="badge badge--rrb">RRB</span>
-          <span className="badge badge--bank">Bank</span>
+          {/* Exam mode chips - visible in mobile menu */}
+          <div className={styles.mobileModes} aria-label="Exam modes">
+            <span className="badge badge--ssc">SSC</span>
+            <span className="badge badge--rrb">RRB</span>
+            <span className="badge badge--bank">Bank</span>
+          </div>
         </div>
-      </div>
+      </nav>
     </header>
   );
 }
