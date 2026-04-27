@@ -4,6 +4,7 @@ import { inter, jetbrainsMono } from './fonts';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import AdPlaceholder from '@/components/ads/AdPlaceholder';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
@@ -39,7 +40,13 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <body>
+      <body className="min-h-screen flex flex-col">
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6035074577927627"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <Navbar />
         <div className="layout-with-ads">
           <aside className="ad-sidebar ad-sidebar-left">
