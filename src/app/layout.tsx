@@ -50,11 +50,11 @@ export default function RootLayout({
         <Navbar />
         <div className="layout-with-ads">
           <aside className="ad-sidebar ad-sidebar-left">
-            <AdPlaceholder format="vertical" />
+            <AdPlaceholder format="vertical" slot="1914901837" />
           </aside>
           <main id="main-content">{children}</main>
           <aside className="ad-sidebar ad-sidebar-right">
-            <AdPlaceholder format="vertical" />
+            <AdPlaceholder format="vertical" slot="1914901837" />
           </aside>
         </div>
         <Footer />
