@@ -106,3 +106,23 @@
   display: flex;
   gap: var(--space-3);
 }
+
+@media (max-width: 640px) {
+  .resultsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .resultsActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .resultsActions button {
+    width: 100%;
+    justify-content: center;
+  }
+  .stat {
+    padding: var(--space-3);
+  }
+  .statValue {
+    font-size: var(--text-xl);
+  }
+}

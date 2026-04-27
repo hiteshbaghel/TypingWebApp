@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 
 const navLinks = [
@@ -14,6 +15,21 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  // Prevent scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMenuOpen]);
 
   return (
     <header className={styles.header} role="banner">
@@ -26,10 +42,29 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Nav links */}
+        {/* Hamburger Menu Toggle */}
+        <button 
+          className={styles.menuToggle} 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-expanded={isMenuOpen}
+          aria-label="Toggle navigation menu"
+        >
+          <div className={`${styles.hamburger} ${isMenuOpen ? styles.hamburgerOpen : ''}`} />
+        </button>
+
+        {/* Exam mode chips - desktop only */}
+        <div className={styles.modes} aria-label="Exam modes">
+          <span className="badge badge--ssc">SSC</span>
+          <span className="badge badge--rrb">RRB</span>
+          <span className="badge badge--bank">Bank</span>
+        </div>
+      </nav>
+
+      {/* Nav Content (Overlay on Mobile) */}
+      <div className={`${styles.navContent} ${isMenuOpen ? styles.navContentOpen : ''}`}>
         <ul className={styles.links} role="list">
           {navLinks.map(({ href, label }) => (
-            <li key={href}>
+            <li key={href} className={styles.navItem}>
               <Link
                 href={href}
                 className={`${styles.link} ${pathname === href ? styles.linkActive : ''}`}
@@ -41,13 +76,13 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Exam mode chips */}
-        <div className={styles.modes} aria-label="Exam modes">
+        {/* Exam mode chips - visible in mobile menu */}
+        <div className={styles.mobileModes} aria-label="Exam modes">
           <span className="badge badge--ssc">SSC</span>
           <span className="badge badge--rrb">RRB</span>
           <span className="badge badge--bank">Bank</span>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }

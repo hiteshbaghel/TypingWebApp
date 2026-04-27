@@ -56,6 +56,31 @@
 }
 
 @media (max-width: 640px) {
-  .bar { gap: var(--space-3); padding: var(--space-3) var(--space-4); }
+  .bar { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    padding: var(--space-4); 
+    border-radius: var(--radius-lg);
+  }
+  .metric {
+    min-width: unset;
+    border-right: 1px solid var(--bg-border);
+  }
+  .metric:nth-child(2n) {
+    border-right: none;
+  }
+  .divider {
+    display: none;
+  }
+  .examBadge {
+    grid-column: span 2;
+    margin: 0 auto;
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--bg-border);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .value { font-size: var(--text-xl); }
 }

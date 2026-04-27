@@ -102,3 +102,25 @@
 
 .dim { color: var(--text-muted); }
 .danger { color: var(--danger); font-size: 0.9em; }
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding-top: var(--space-6);
+    gap: var(--space-6);
+  }
+  .title {
+    font-size: var(--text-2xl);
+  }
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+  .statValue {
+    font-size: var(--text-2xl);
+  }
+  .chartContainer {
+    height: 200px;
+  }
+  .chartCard {
+    padding: var(--space-4);
+  }
+}

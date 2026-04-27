@@ -111,6 +111,15 @@
 @media (max-width: 640px) {
   .page {
     gap: var(--space-10);
-    padding: var(--space-8) var(--space-4);
+    padding: var(--space-6) var(--space-4);
+  }
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+  .heroSub {
+    font-size: var(--text-base);
+  }
+  .featureGrid {
+    grid-template-columns: 1fr;
   }
 }

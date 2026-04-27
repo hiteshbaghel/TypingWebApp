@@ -71,8 +71,10 @@ export const useTypingStore = create<TypingStore>((set, get) => {
       set({ sessionState: 'loading' });
       try {
         const { difficulty } = get();
+        
         // Fetch index to find passage list
         const idxRes = await fetch('/corpus/index.json');
+        if (!idxRes.ok) throw new Error(`Failed to load index: ${idxRes.status}`);
         const allPassages: {id: string, difficulty: string, wordCount: number}[] = await idxRes.json();
         
         // Filter by difficulty
@@ -80,28 +82,36 @@ export const useTypingStore = create<TypingStore>((set, get) => {
         if (available.length === 0) throw new Error(`No passages for difficulty ${difficulty}`);
         
         // Prevent repeats within 24h
-        const seenStr = localStorage.getItem('typing_seen_passages');
-        let seen: Record<string, number> = seenStr ? JSON.parse(seenStr) : {};
+        let seen: Record<string, number> = {};
+        try {
+          const seenStr = localStorage.getItem('typing_seen_passages');
+          seen = seenStr ? JSON.parse(seenStr) : {};
+        } catch (e) {
+          console.warn("localStorage access failed", e);
+        }
+        
         const now = Date.now();
         // Cleanup older than 24h
         seen = Object.fromEntries(Object.entries(seen).filter(([, time]) => now - time < 24 * 60 * 60 * 1000));
         
         let availableUnseen = available.filter(p => !seen[p.id]);
         if (availableUnseen.length === 0) {
-          // Fallback to allowing repeats if all have been seen
           availableUnseen = available;
         }
         
         // Pick random
         const pMeta = availableUnseen[Math.floor(Math.random() * availableUnseen.length)];
         
-        // Mark as seen
-        seen[pMeta.id] = now;
-        localStorage.setItem('typing_seen_passages', JSON.stringify(seen));
-        
         // Fetch passage
         const pRes = await fetch(`/corpus/${difficulty}/${pMeta.id}.json`);
+        if (!pRes.ok) throw new Error(`Failed to load passage file: ${pRes.status}`);
         const pData: {id: string, text: string} = await pRes.json();
+        
+        // Mark as seen
+        seen[pMeta.id] = now;
+        try {
+          localStorage.setItem('typing_seen_passages', JSON.stringify(seen));
+        } catch (e) { /* ignore quota errors */ }
         
         const words = tokenize(pData.text);
         set({
@@ -118,9 +128,9 @@ export const useTypingStore = create<TypingStore>((set, get) => {
           metrics: null,
         });
       } catch (err) {
-        console.error("Failed to load passage:", err);
+        console.error("Session start failed:", err);
         set({ sessionState: 'idle' });
-        alert("Failed to load passage. Please try again.");
+        alert("Could not start test. Please check your internet connection and try again.");
       }
     },
 

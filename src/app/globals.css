@@ -194,6 +194,12 @@ code, pre, kbd, samp {
   padding-inline: var(--space-6);
 }
 
+@media (max-width: 640px) {
+  .container {
+    padding-inline: var(--space-4);
+  }
+}
+
 .container--narrow {
   max-width: 800px;
   margin-inline: auto;
@@ -249,7 +255,12 @@ code, pre, kbd, samp {
 
 .btn--primary:hover {
   background: hsl(213, 100%, 70%);
-  box-shadow: var(--shadow-accent);
+  box-shadow: 0 0 20px rgba(79, 156, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn--primary:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .btn--ghost {

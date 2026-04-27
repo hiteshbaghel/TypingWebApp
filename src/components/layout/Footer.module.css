@@ -10,7 +10,23 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--space-6);
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: var(--space-12) 0;
+  }
+  .inner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+  }
 }
 
 .copy {
