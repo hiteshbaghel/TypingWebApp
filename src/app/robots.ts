@@ -5,8 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/'],
     },
-    sitemap: 'https://webapp.hiteshbaghel.in/sitemap.xml',
+    sitemap: 'https://typingsprint.hiteshbaghel.in/sitemap.xml',
   };
 }
