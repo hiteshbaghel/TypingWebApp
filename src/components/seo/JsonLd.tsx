@@ -5,17 +5,32 @@
 
 const BASE_URL = 'https://typingsprint.hiteshbaghel.in';
 
+/* ── WebSite Schema ────────────────────────────────────────── */
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Typing Sprint',
+  alternateName: ['typingsprint', 'TypingSprint', 'Typing Sprint by Hitesh Baghel'],
+  url: BASE_URL,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${BASE_URL}/?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 /* ── WebApplication Schema ─────────────────────────────────── */
 const webAppSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  name: 'Typing Sprint - Typing Master',
+  name: 'Typing Sprint',
+  alternateName: ['typingsprint', 'TypingSprint', 'Typing Master'],
   url: BASE_URL,
   applicationCategory: 'EducationalApplication',
   operatingSystem: 'All',
   browserRequirements: 'Requires JavaScript. Requires HTML5.',
   description:
-    'Best typing practice platform for SSC CGL, CHSL, RRB NTPC, SBI PO, and IBPS PO. Free online typing master with exam-accurate scoring, WPM tracking, and keyboard heatmaps.',
+    'Typing Sprint (typingsprint) is the best typing practice platform for SSC CGL, CHSL, RRB NTPC, SBI PO, and IBPS PO. Free online typing master with exam-accurate scoring, WPM tracking, and keyboard heatmaps.',
   offers: {
     '@type': 'Offer',
     price: '0',
@@ -44,6 +59,7 @@ const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Typing Sprint',
+  alternateName: ['typingsprint', 'TypingSprint'],
   url: BASE_URL,
   logo: `${BASE_URL}/og-image.png`,
   sameAs: [
@@ -130,7 +146,7 @@ interface JsonLdProps {
 }
 
 export default function JsonLd({ includeFaq = false, extraSchemas = [] }: JsonLdProps) {
-  const schemas = [webAppSchema, orgSchema, ...(includeFaq ? [faqSchema] : []), ...extraSchemas];
+  const schemas = [websiteSchema, webAppSchema, orgSchema, ...(includeFaq ? [faqSchema] : []), ...extraSchemas];
 
   return (
     <>

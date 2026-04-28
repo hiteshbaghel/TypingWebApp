@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import AdPlaceholder from '@/components/ads/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'About Us | Typing-Sprint',
-  description: 'Learn about Typing-Sprint, the ultimate high-fidelity typing performance platform for Indian government and banking exams.',
+  title: 'About Us | Typing Sprint (typingsprint)',
+  description: 'Learn about Typing Sprint, the ultimate high-fidelity typing practice platform for Indian government and banking exams.',
 };
 
 export default function AboutPage() {
@@ -23,10 +23,10 @@ export default function AboutPage() {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent'
         }}>
-          About TypingPro
+          About Typing Sprint
         </h1>
         <p style={{ fontSize: 'var(--text-xl)', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '700px', margin: '0 auto' }}>
-          India's most advanced, high-fidelity typing simulator meticulously engineered for government and banking recruitment exams.
+          Typing Sprint (typingsprint) is India's most advanced, high-fidelity typing simulator meticulously engineered for government and banking recruitment exams.
         </p>
       </div>
 

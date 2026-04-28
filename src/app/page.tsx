@@ -6,9 +6,9 @@ import JsonLd from '@/components/seo/JsonLd';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Typing Master & Typing Practice for SSC CGL, SBI PO, IBPS PO',
+  title: 'Typing Sprint - Free Typing Master for SSC CGL, SBI PO, IBPS PO',
   description:
-    'Start your typing practice for SSC CGL, RRB NTPC, SBI PO, and IBPS PO exams. The ultimate typing master platform to improve speed and accuracy with real exam passages.',
+    'Start your typing practice with Typing Sprint. The ultimate online typingsprint platform to improve speed and accuracy for SSC CGL, RRB NTPC, SBI PO, and IBPS PO exams.',
 };
 
 export default function HomePage() {
@@ -18,10 +18,10 @@ export default function HomePage() {
       {/* Hero */}
       <section className={styles.hero} aria-labelledby="hero-heading">
         <h1 id="hero-heading" className={styles.heroTitle}>
-          Typing Practice for SSC CGL, RRB, SBI PO &amp; IBPS PO
+          Typing Sprint: Free Typing Practice for SSC CGL, RRB, SBI PO &amp; IBPS PO
         </h1>
         <p className={styles.heroSub}>
-          The ultimate Typing Master for competitive exams. Master SSC DEST, RRB NTPC &amp; Banking typing tests with India&apos;s most precise scoring engine. Real exam rules. Real pressure.
+          Start your Typing Sprint for competitive exams. Master SSC DEST, RRB NTPC &amp; Banking typing tests with our free typingsprint master. Real exam rules. Real pressure.
         </p>
         <div className={styles.heroBadges} aria-label="Supported exams">
           <span className="badge badge--ssc">SSC CGL / CHSL / DEO</span>
