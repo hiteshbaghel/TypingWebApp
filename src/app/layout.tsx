@@ -8,20 +8,50 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Typing-Sprint — SSC, RRB & Banking Exam Typing Practice',
-    template: '%s | Typing-Sprint',
+    default: 'Typing Practice for SSC CGL, RRB, SBI PO, IBPS PO | Typing Master',
+    template: '%s | Typing Practice',
   },
   description:
-    'High-fidelity typing practice platform for SSC, RRB NTPC, and Banking exams. Accurate error marking, KDPH, WPM tracking and keyboard heatmaps.',
+    'Best typing practice platform for SSC CGL, CHSL, RRB NTPC, SBI PO, and IBPS PO. Improve your typing speed and accuracy with our Typing Master tools. Real exam interface.',
+  keywords: [
+    'typing practice',
+    'typing practice for SSC CGL',
+    'typing practice for SBI PO',
+    'typing practice for IBPS PO',
+    'Typing Master',
+    'SSC typing',
+    'CGL typing',
+    'RRB typing',
+    'SBI PO typing',
+    'online typing test',
+    'typing speed test',
+    'SSC CGL typing test',
+    'RRB NTPC typing',
+    'banking typing test'
+  ],
   metadataBase: new URL('https://typingsprint.hiteshbaghel.in'),
   openGraph: {
     type: 'website',
     locale: 'en_IN',
     url: 'https://typingsprint.hiteshbaghel.in',
     siteName: 'Typing-Sprint',
-    title: 'Typing-Sprint — SSC, RRB & Banking Exam Typing Practice',
+    title: 'Typing Practice for SSC CGL, RRB, SBI PO, IBPS PO | Typing Master',
     description:
-      'High-fidelity typing practice platform for SSC, RRB NTPC, and Banking exams.',
+      'Practice typing online for SSC CGL, RRB NTPC, SBI PO, and IBPS PO. Improve WPM, accuracy, and master typing for competitive exams.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Typing Practice for Competitive Exams'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Typing Practice for SSC CGL, RRB, SBI PO, IBPS PO | Typing Master',
+    description: 'Practice typing online for SSC CGL, RRB NTPC, SBI PO, and IBPS PO. Improve WPM and accuracy.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
